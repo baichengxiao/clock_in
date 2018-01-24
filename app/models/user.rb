@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :timesheets
+  has_many :timesheets, dependent: :destroy
 
 
   has_secure_password

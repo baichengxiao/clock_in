@@ -1,0 +1,19 @@
+<h2>Timesheets index page</h2>
+<%= link_to 'Create New Timesheets', new_timesheet_path %>
+<table class="table">
+  <tr>
+    <th>User Name</th>
+    <th>Week Number</th>
+    <th>Date</th>
+    <th>Hours</th>
+  </tr>
+  <% @timesheets.each do |t| %>
+    <tr>
+      <td> <%= t.user.username %> </td>
+      <td><%= t.week_number %> </td>
+      <td><%= t.date %>  </td>
+      <td> <%= t.hour %> </td>
+    </tr>
+  <% end %>
+</table>
+<%= flash[:notice] unless flash[:notice].blank? %>

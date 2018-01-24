@@ -1,0 +1,15 @@
+<table>
+  <tr>
+    <th>User</th>
+    <td> <%= f.select :user_id, User.all.collect {|u| [u.username,u.id]} %> </td>
+  </tr>
+  <tr>
+    <th>Date</th>
+    <td> <%= f.date_field :date %> </td>
+  </tr>
+  <tr>
+    <th>Hour</th>
+    <td><%= f.select :hour, (1..24).to_a %></td>
+
+  </tr>
+</table>

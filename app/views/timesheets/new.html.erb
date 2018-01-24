@@ -1,0 +1,5 @@
+<h2>New Timehseet page</h2>
+<%= form_for @timesheet do |f| %>
+  <%= render partial: 'form', locals:{f:f} %>
+  <%= f.submit "Create" %>
+<% end %>
