@@ -1,2 +1,10 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h2>User show page</h2>
+<%= flash[:notice] unless flash[:notice].blank? %>
+<ul>
+  <li>ID: <%= @user.id %></li>
+  <li>Name: <%= @user.username %></li>
+  <li>Email: <%= @user.email %></li>
+  <li>Role: <%= @user.role %></li>
+  <li>Created: <%= @user.created_at %></li>
+  <li>Updated: <%= @user.updated_at %></li>
+</ul>

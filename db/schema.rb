@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20180123115955) do
     t.integer "user_id"
     t.string "week_number"
     t.date "date"
-    t.integer "hour"
+    t.integer "hour", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["week_number"], name: "index_timesheets_on_week_number"

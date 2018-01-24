@@ -1,2 +1,22 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<h2>Users index page</h2>
+<%= link_to 'Create New User', new_user_path %>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Role</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td> <%= user.username %></td>
+      <td> <%= user.email %></td>
+      <td> <%= user.role %>  </td>
+      <td> <%= link_to 'show',user_path(user) %> </td>
+      <td> <%= link_to 'edit', edit_user_path(user) %> </td>
+      <td> <%= link_to 'delete', delete_user_path(user) %> </td>
+    </tr>
+
+
+  <% end %>
+</table>
+<%= flash[:notice] unless flash[:notice].blank? %>

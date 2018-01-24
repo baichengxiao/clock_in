@@ -1,2 +1,5 @@
-<h1>Users#delete</h1>
-<p>Find me in app/views/users/delete.html.erb</p>
+<h2>Delete user page</h2>
+<%= form_for @user, method: :delete do |f| %>
+<h3> <%= "Deleting user:#{@user.username}, do you want to continue?" %></h3>
+<%= f.submit "Yes,continue" %>
+<% end %>
